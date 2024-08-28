@@ -56,7 +56,7 @@ export default class IconBarManager extends Plugin {
 		await this.loadSettings();
 		this.addSettingTab(this.settingsTab);
 		
-		console.log('Loaded plugin Icon Bar Manager');
+		// console.log('Loaded plugin Icon Bar Manager');
 
         this.app.workspace.onLayoutReady(() => {
             this.patchIconBar();
