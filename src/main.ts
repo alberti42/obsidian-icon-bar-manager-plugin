@@ -77,27 +77,6 @@ export default class IconBarManager extends Plugin {
         };
 
         // MutationObserver callback function
-        const observerCallback1: MutationCallback = (mutationsList: MutationRecord[]) => {
-            mutationsList.forEach(mutation => {
-                // We're interested in 'childList' mutations
-                if (mutation.type === 'childList') {
-                    mutation.addedNodes.forEach(node => {
-                        if(isElement(node)) {
-                            node.innerHTML;
-                        }
-                        // Check if the added node is an Element and has the class 'menu-item'
-                        if (isElement(node) && node.classList.contains('menu-item')) {
-                            console.log('New menu-item detected:', node);
-
-                            // Optionally perform further operations, like adding a class
-                            // node.classList.add('your-custom-class');
-                        }
-                    });
-                }
-            });
-        };
-
-        // MutationObserver callback function
         const observerCallback: MutationCallback = (mutationsList: MutationRecord[]) => {
             mutationsList.forEach((mutation: MutationRecord) => {
                 if (mutation.type === "childList" && mutation.addedNodes.length > 0) {
@@ -107,6 +86,12 @@ export default class IconBarManager extends Plugin {
                             
                             // Check if the node has the 'menu-item' class
                             if (node.classList.contains('menu')) {
+                                
+
+                                if(isHTMLElement(node)) {
+                                    node.style.display = 'flex';
+                                    node.style.flexDirection = 'column';
+                                }
                                 
                                 const titleElements = node.querySelectorAll('div.menu-item');
 
@@ -121,7 +106,6 @@ export default class IconBarManager extends Plugin {
                                         }
                                     }
                                 });
-                                console.log(node.innerHTML);
                             }
                         }
                     });
