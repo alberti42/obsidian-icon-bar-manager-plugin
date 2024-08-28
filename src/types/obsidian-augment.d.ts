@@ -1,0 +1,1 @@
+// obsidian-augment.d.ts

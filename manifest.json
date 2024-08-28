@@ -1,0 +1,11 @@
+{
+  "id": "icon-bar-manager",
+  "name": "Icon bar manager",
+  "version": "1.0.0",
+  "minAppVersion": "1.5.0",
+  "description": "Allows managing the icon bar",
+  "author": "Andrea Alberti",
+  "authorUrl": "https://www.linkedin.com/in/dr-andrea-alberti/",
+  "fundingUrl": "https://buymeacoffee.com/alberti",
+  "isDesktopOnly": false
+}
