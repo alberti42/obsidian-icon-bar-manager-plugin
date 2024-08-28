@@ -1,4 +1,4 @@
-# Import Attachments+ for Obsidian
+# Icon Bar Manager Plugin for Obsidian
 
 ## Overview
 **Import Attachments+** is a plugin designed to enhance the attachment management experience in Obsidian. It allows you to import, organize, and handle attachments (like images, documents, and other files) seamlessly within your vault. 
