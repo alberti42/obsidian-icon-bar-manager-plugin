@@ -87,11 +87,10 @@ export default class IconBarManager extends Plugin {
                             // Check if the node has the 'menu-item' class
                             if (node.classList.contains('menu')) {
                                 
-
-                                if(isHTMLElement(node)) {
-                                    node.style.display = 'flex';
-                                    node.style.flexDirection = 'column';
-                                }
+                                // if(isHTMLElement(node)) {
+                                //     node.style.display = 'flex';
+                                //     node.style.flexDirection = 'column';
+                                // }
                                 
                                 const titleElements = node.querySelectorAll('div.menu-item');
 
