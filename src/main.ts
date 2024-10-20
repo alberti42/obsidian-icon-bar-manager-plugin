@@ -132,6 +132,14 @@ export default class IconBarManager extends Plugin {
 	onunload() {
 	}
 
+    async onExternalSettingsChange() {
+        // Load settings
+        await this.loadSettings();
+
+        const activeTab = this.app.setting.activeTab;
+        if(activeTab && activeTab instanceof PluginSettingTab) activeTab.display();
+    }
+
 	async loadSettings() {
     	this.settings = Object.assign({}, DEFAULT_SETTINGS, await this.loadData());
 	}
