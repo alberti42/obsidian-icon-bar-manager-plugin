@@ -3,19 +3,9 @@
 // Import necessary Obsidian API components
 import {
 	App,
-	MarkdownView,
-	MarkdownFileInfo,
-	Editor,
-	Notice,
-	FileSystemAdapter,
 	Plugin,
 	PluginSettingTab,
-	Setting,
-	TAbstractFile,
-	Platform,
 	PluginManifest,
-	TextComponent,
-	normalizePath,
 } from "obsidian";
 
 import { DEFAULT_SETTINGS } from "default";
